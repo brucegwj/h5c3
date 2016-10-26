@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html{
+            background:linear-gradient(#ff0 0%,#000 80%);
+            height:100%;
+        }
+        body{
+            transform-style: preserve-3d;
+
+        }
+      .box{
+          width: 200px;
+          height: 200px;
+          margin: 150px auto;
+          position: absolute;
+          left: 50%;
+          animation: rotate 10s infinite;
+          transform-style: preserve-3d;
+      }
+      @keyframes rotate{
+          from{transform: rotateX(0deg) rotateY(0deg);}
+          to{transform: rotateX(360deg) rotateY(360deg);}
+      }
+
+        /*外面的3D*/
+      .box div{
+          width: 200px;
+          height: 200px;
+          position: absolute;
+          opacity: .8;
+      }
+      .box .pic{
+          width: 100%;
+          height: 100%;
+      }
+      .out:nth-child(1){
+          transform:rotateY(0deg) translateZ(100px);
+      }
+      .out:nth-child(2){
+          transform:rotateY(180deg) translateZ(100px);
+      }
+      .out:nth-child(3){
+          transform:rotateY(-90deg) translateZ(100px);
+      }
+      .out:nth-child(4){
+          transform:rotateY(90deg) translateZ(100px);
+      }
+      .out:nth-child(5){
+          transform:rotateX(90deg) translateZ(100px);
+      }
+      .out:nth-child(6){
+          transform:rotateX(-90deg) translateZ(100px);
+      }
+      /*里面的3D*/
+      .box span{
+          width: 100px;
+          height: 100px;
+          position: absolute;
+          top: 50px;
+          left: 50px;
+      }
+      .box .inpic{
+          width: 100%;
+          height: 100%;
+      }
+      .in:nth-child(1){
+          transform:rotateY(0deg) translateZ(50px);
+      }
+      .in:nth-child(2){
+          transform:rotateY(180deg) translateZ(50px);
+      }
+      .in:nth-child(3){
+          transform:rotateY(-90deg) translateZ(50px);
+      }
+      .in:nth-child(4){
+          transform:rotateY(90deg) translateZ(50px);
+      }
+      .in:nth-child(5){
+          transform:rotateX(90deg) translateZ(50px);
+      }
+      .in:nth-child(6){
+          transform:rotateX(-90deg) translateZ(50px);
+      }
+      /*盒子打开*/
+      .box:hover .out:nth-child(1){
+          transform:rotateY(0deg) translateZ(200px);
+      }
+      .box:hover .out:nth-child(2){
+          transform:rotateY(180deg) translateZ(200px);
+      }
+      .box:hover .out:nth-child(3){
+          transform:rotateY(-90deg) translateZ(200px);
+      }
+      .box:hover .out:nth-child(4){
+          transform:rotateY(90deg) translateZ(200px);
+      }
+      .box:hover .out:nth-child(5){
+          transform:rotateX(90deg) translateZ(200px);
+      }
+      .box:hover .out:nth-child(6){
+          transform:rotateX(-90deg) translateZ(200px);
+      }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="out"><img src="img/1.jpg"  class="pic"/></div>
+        <div class="out"><img src="img/2.jpg" class="pic"/></div>
+        <div class="out"><img src="img/3.jpg" class="pic"/></div>
+        <div class="out"><img src="img/4.jpg" class="pic"/></div>
+        <div class="out"><img src="img/5.jpg" class="pic"/></div>
+        <div class="out"><img src="img/6.jpg" class="pic"/></div>
+    </div>
+    <div class="box">
+        <span class="in"><img src="img/6.jpg" class="inpic"/></span>
+        <span class="in"><img src="img/5.jpg" class="inpic"/></span>
+        <span class="in"><img src="img/4.jpg" class="inpic"/></span>
+        <span class="in"><img src="img/3.jpg" class="inpic"/></span>
+        <span class="in"><img src="img/2.jpg"  class="inpic"/></span>
+        <span class="in"><img src="img/1.jpg"  class="inpic"/></span>
+    </div>
+</body>
+</html>
